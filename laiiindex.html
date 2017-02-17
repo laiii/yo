@@ -1,0 +1,308 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>| LAIII.NET |</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/jquery-2.1.3.js" type="text/javascript"></script>
+
+  <style type="text/css">
+  
+@font-face{ 
+	font-family: 'gotham htf';
+	src: url('http://laiii.net/snakeriver/GothamBook.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{ 
+  font-family: 'raleway';
+  src: url('http://laiii.net/snakeriver/Raleway.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, html {
+  background: #393939;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  margin:0;
+  padding:0;
+  color:#fff;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+
+    .grad1 {
+    height: 200px;
+    background: -webkit-linear-gradient(left top, #191919 , #2c2c2c); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #191919, #2c2c2c); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #191919, #2c2c2c); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #191919 , #2c2c2c); /* Standard syntax (must be last) */
+    }
+  
+
+    #container {
+      padding-top: 5%;
+      position: relative;
+	    text-align:center;
+      height: 100%;
+      width: 100%;
+      border: 0px solid blue;
+      -webkit-perspective: 1500;/*moving area size*/
+    }
+
+    #parent {
+      width: 70vw;
+      height: 35vw;
+      -webkit-transform-style: preserve-3d;
+      -webkit-animation: spin 50s infinite linear;
+    }
+    
+   /* #container:hover #parent {
+      -webkit-transform-style: flat;
+          -webkit-animation: none;
+
+	}*/
+    
+    @-webkit-keyframes spin {
+      from { -webkit-transform: rotateX(0) ; }
+      to   { -webkit-transform: rotateX(360deg); }
+	
+    }
+	    
+
+    
+    #parent > div {
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      width: 100%;
+      height: 90%;
+      padding: 10px;
+      -webkit-box-sizing: border-box;
+      font-size: 12pt;
+    }
+
+     #parent > :first-child {
+      -webkit-transform: translateZ(20px) rotateY(0deg);
+    }
+	   #parent > :nth-child(2) {
+      -webkit-transform: translateZ(20px) rotateY(30deg);
+    }
+     #parent > :nth-child(3) {
+      -webkit-transform: translateZ(20px) rotateY(60deg);/*translate z: how close to the other one*/
+    }
+	   #parent > :nth-child(4) {
+      -webkit-transform: translateZ(20px) rotateY(90deg);
+    }
+	   #parent > :nth-child(5) {
+      -webkit-transform: translateZ(20px) rotateY(120deg);
+    }
+     #parent > :last-child {
+      -webkit-transform: translateZ(20px) rotateY(150deg);
+      -webkit-transform-origin: 50% top;
+    }
+	
+    .hexagon {
+    	width: 100%;
+    	height: 100%;
+    	background: rgba(230,30,30,0.02);
+    	position: relative;
+    }
+    .hexagon:before {
+    	content: "";
+    	position: absolute;
+    	top: -17.45vw;
+    	left: 0;
+    	width: 0;
+    	height: 0;
+    	border-left: 35vw solid transparent;
+    	border-right: 35vw solid transparent;
+    	border-bottom: 17.5vw solid rgba(255,0,0,0.03);
+    }
+    .hexagon:after {
+    	content: "";
+    	position: absolute;
+    	bottom: -17.45vw;
+    	left: 0;
+    	width: 0;
+    	height: 0;
+      border-left: 35vw solid transparent;
+      border-right: 35vw solid transparent;
+      border-top: 17.5vw solid rgba(255,30,0,0.03);
+
+    }
+    	 @-moz-document url-prefix() {
+         .hexagon{display: none} 
+         #container {
+              padding: 0;
+              margin: 0;
+              background-image: url('bg.png');
+              background-size: cover;
+              background-size: auto 100%;
+              background-position: bottom;
+              background-repeat: no-repeat; }
+
+            }
+
+  
+.content{
+  position: absolute;
+  top:20%;
+  left: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 100;
+  width: 220px;
+  height: 65px;
+  margin: 5px;
+  font-size: 1vw;
+  padding: 1.5vw;
+  overflow:hidden
+
+}
+
+.up{text-transform: uppercase;}
+.clearBoth{
+  clear:both;
+}
+
+.content.resize:hover{
+  width: 220px;
+  height: 480px;
+  background: #191919;
+  font-family: 'open sans', Tahoma, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  
+  /*Transition*/
+  -webkit-transition: width 1.5s ease, height 1.5s ease;
+  -moz-transition: width 1.5s ease, height 1.5s ease;
+  -o-transition: width 1.5s ease, height 1.5s ease;
+  transition: width 1.5s ease, height 1.5s ease;
+}
+
+
+.btn {
+    width: 216px;
+    height: 51px;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 51px;
+    text-transform: uppercase;
+    letter-spacing:3px;
+    display: inline-block;
+    border: 1px solid #b5b5b5;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    float: none;
+    font-family: 'gotham htf', Tahoma, sans-serif;
+}
+
+
+form {
+    max-width: 100%;
+    font-size:12px;
+    letter-spacing:1px;
+    color:#8e8d8d;
+}
+
+input[type="text"], input[type="email"], textarea, select{
+    background:#191919;
+    color: #c7c7c7;
+    height: 13px;
+    font-size:11px;
+    line-height:13px;
+    margin-top: 2px;
+    border: 0px;
+    border-bottom: 1px solid #393939;
+    padding:6px 6px 6px 10px;
+    font-family: "open sans";
+    letter-spacing: 1px;
+   /* border-radius: 4px;
+     -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+       /*-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
+     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 2);*/
+    
+}
+
+input[name="name"], input[name="email"]{
+    width:75%;}
+
+textarea{
+    height:80px;
+    width:90%;
+    margin-bottom: 30px;
+    padding-top:10px; 
+}
+
+input:hover, textarea:hover {
+    background-color: #292929;
+}
+
+.button {
+    background: #2d2d2d;
+    border: 0px solid #3c3c3c;
+    color: #858585;
+    border-radius: 4px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-size:10px;
+    width: 60px;
+    height:30px;
+    padding:5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: #000;
+    background-color: #808080;
+    border-color: #353535;
+    cursor: pointer;
+
+}
+
+form img{margin-right:5px}
+  </style>
+
+</head>
+<body>
+  <div class="content resize">
+      <p class="btn">Stay In Touch</p>
+      <br/><br/><br/>This site is currently under constrution. 
+      <p>But I am always happy to hear from you. Feel free to drop me a line :) </p>
+      <br/>
+        <form method="post" action=""  class='ajaxform'>
+             <p><img src="name.png" height="17px" ><input type="text" name="name" id="Name"></p>
+             <p><img src="email.png" height="17px"><input type="text" name="email" id="Email"></p>          
+             <textarea name="message" rows="20" cols="20" id="Message"></textarea>
+        <p align="right"><input type="submit" name="submit" value="Send" class="button"></p>     <!-- <input type="submit" name="submit2" value="Clear" class="button" >-->
+        </form>
+    </div>
+
+    <div class="clearBoth"></div>
+<div id="container" class="grad1">
+    <div id="parent">
+      <div class="hexagon"></div>
+      <div class="hexagon"></div>
+      <div class="hexagon"></div>
+      <div class="hexagon"></div>
+      <div class="hexagon"></div>
+      <div class="hexagon"></div>
+    </div>
+  </div>
+
+  <h1>&nbsp;</h1>
+
+</body>
+</html>
