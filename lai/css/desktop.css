@@ -43,41 +43,41 @@ A:hover {
 
 @font-face{ 
 	font-family: 'Gotham Bold';
-	src: url('font/gothambold.ttf') format('truetype');
+	src: url('//statics3.seeedstudio.com/assets/fonts/test_laii_font/gothambold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face{ 
 	font-family: 'Montserrat Hairline';
-	src: url('font/Montserrat.otf') format('opentype');
+	src: url('//statics3.seeedstudio.com/assets/fonts/test_laii_font/Montserrat.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face{ 
     font-family: 'Montserrat';
-    src: url('font/Montserrat-Light.otf') format('opentype');
+    src: url('//statics3.seeedstudio.com/assets/fonts/test_laii_font/Montserrat-Light.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face{ 
     font-family: 'hanamina';
-    src: url('font/hanamina.ttf') format('truetype');
+    src: url('//statics3.seeedstudio.com/assets/fonts/test_laii_font/hanamina.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;}
 
 @font-face{ 
     font-family: 'BauerBodoni LT';
-    src: url('font/BauerBodoniLT.ttf') format('truetype');
+    src: url('//statics3.seeedstudio.com/assets/fonts/test_laii_font/BauerBodoniLT.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;}
 
 
 @font-face{ 
     font-family: 'anivers';
-    src: url('font/anivers.ttf') format('truetype');
+    src: url('//statics3.seeedstudio.com/assets/fonts/test_laii_font/anivers.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;}
 h1{
